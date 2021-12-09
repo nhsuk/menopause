@@ -1,0 +1,235 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Content page template - NHS.UK prototype kit
+{% endblock %}
+
+<!-- Header goes inside the header block -->
+<!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
+{% block header %}
+
+  {{
+    header({
+      "showNav": "true",
+      "showSearch": "true",
+      "primaryLinks": [
+        {
+        "url": "https://www.nhs.uk/conditions/",
+        "label" : "Health A-Z "
+        },
+    
+        {
+        'url': 'https://www.nhs.uk/live-well/',
+        'label' : 'Live Well'
+        },
+
+        {
+        'url': 'https://www.nhs.uk/mental-health/',
+        'label' : 'Mental health'
+        },
+
+        {
+        'url': 'https://www.nhs.uk/conditions/social-care-and-support-guide/',
+        'label' : 'Care and support'
+        },
+
+        {
+        'url': 'pregnancy-hub/',
+        'label' : 'Pregnancy'
+        },
+
+        {
+        'url': 'https://www.nhs.uk/nhs-services/',
+        'label': 'NHS services'
+        }
+      ]
+    })
+  }}
+
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      }
+      ],
+        href: "/",
+        text: "Health A to Z"
+  }) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h1>
+      <span role="text">Overview
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+          <span class="nhsuk-u-visually-hidden"> - </span>
+          Menopause
+        </span>
+      </span>
+    </h1>
+
+    <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+      <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+      <ol class="nhsuk-contents-list__list">
+
+        <li class="nhsuk-contents-list__item" aria-current="page">
+          <span class="nhsuk-contents-list__current">Overview</span>
+        </li>
+
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link" href="symptoms">Symptoms</a>
+        </li>
+
+        <li class="nhsuk-contents-list__item">
+          <a class="nhsuk-contents-list__link" href="treatment">Treatment</a>
+        </li>
+
+      </ol>
+    </nav>
+
+  </div>
+</div>
+
+
+<article>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <section>
+        <p><b>The menopause is when your ovaries stop releasing an egg every month and your periods end. Some of your hormone levels reduce and stay this way for the rest of your life.</b></p>
+        <p>Periods usually start to become less frequent over a few months or years before they stop altogether. Sometimes they can stop suddenly.</p>
+        <p>The menopause usually happens between the ages of 45 and 55.</p>
+        <p>Sometimes, menopause happens before 45 (<a href="early-menopause/">early menopause</a>).</p>
+      </section>
+
+      <section>
+        <a id="symptoms"></a>
+
+        <h2>Symptoms of the menopause</h2>
+        <p>Menopausal symptoms can last for many years, sometimes up to 10. This period of time is called the perimenopause.</p>
+        <p>Symptoms include:</p>
+        <ul>
+          <li><a href="hot-flushes">hot flushes</a></li>
+          <li><a href="https://www.nhs.uk/conditions/night-sweats/">night sweats</a></li>
+          <li><a href="https://www.nhs.uk/conditions/insomnia/">difficulty sleeping</a></li>
+          <li><a href="https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/low-mood-sadness-depression/">low mood</a>, mood swings or <a href="https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/anxiety-fear-panic/">anxiety</a></li>
+          <li><a href="https://www.nhs.uk/conditions/vaginal-dryness/">vaginal dryness</a></li>
+          <li><a href="https://www.nhs.uk/conditions/loss-of-libido/">reduced sex drive (libido)</a></li>
+          <li>problems with memory and concentration</li>
+        </ul>
+        <p>Menopausal symptoms can be severe and have a significant impact on your life. It is important to get support to keep you well.</p>
+
+
+      <section>
+        <div class="nhsuk-card nhsuk-card--care nhsuk-card--care--non-urgent">
+          <div class="nhsuk-card--care__heading-container">
+            <h2 class="nhsuk-card--care__heading">
+              <span role="text"><span class="nhsuk-u-visually-hidden">Non-urgent advice: </span>See a GP if:</span>
+            </h2>
+            <span class="nhsuk-card--care__arrow" aria-hidden="true"></span>
+          </div>
+          <div class="nhsuk-card__content">
+            <ul>
+              <li>you are having menopausal symptoms</li>
+            </ul>
+            <p>They will offer you more support and answer any questions you may have. Usually, you will be diagnosed based on your symptoms.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <a id="medical-treatments"></a>
+        <h2>Treatments for menopausal symptoms</h2>
+        <p>The main treatments are:</p>
+        <ul>
+          <li><a href="hormone-replacement-therapy-hrt/">hormone replacement therapy (HRT)</a>&nbsp;–&nbsp;tablets, skin patches, gels and implants that relieve menopausal symptoms by replacing oestrogen</li>
+          <li>vaginal oestrogen creams, lubricants or moisturisers for vaginal dryness</li>
+          <li><a href="https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/cognitive-behavioural-therapy-cbt/overview/">cognitive behavioural therapy (CBT)</a> – a type of talking therapy that can help with low mood and anxiety</li>
+        </ul>
+        <p>Eating a <a href="https://www.nhs.uk/live-well/eat-well/">healthy, balanced diet</a> and <a href="https://www.nhs.uk/live-well/exercise/">exercising regularly</a> can also improve some menopausal symptoms.</p>
+        <p>Your GP may refer you to a menopause specialist if your symptoms do not improve after trying treatment or if you're unable to take HRT.</p>
+      </section>
+
+      <section>
+        <h2>What causes the menopause?</h2>
+        <p>The menopause is caused by a reduction in the level of your body's sex hormones, which happens as you get older.</p>
+        <p>The menopause can occur at an early age for many other reasons.</p>
+        <p>Causes of the menopause include:</p>
+        <ul>
+          <li>surgery to remove the ovaries (oophorectomy)</li>
+          <li>some <a href="https://www.nhs.uk/conditions/breast-cancer/">cancer</a> treatments such as <a href="https://www.nhs.uk/conditions/chemotherapy/">chemotherapy</a> or <a href="https://www.nhs.uk/conditions/radiotherapy/">radiotherapy</a></li>
+          <li>having an underlying condition, such as as <a href="https://www.nhs.uk/conditions/downs-syndrome/">Down's syndrome</a> or <a href="https://www.nhs.uk/conditions/addisons-disease/">Addison's disease</a>
+        </ul>
+      </section>
+
+
+      <div>
+        <p class="nhsuk-body-s nhsuk-u-margin-top-7 nhsuk-u-secondary-text-color">
+          Page last reviewed: 8 December 2021<br>
+          Next review due: 8 December 2024
+        </p>
+      </div>
+
+      <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+        <ul class="nhsuk-list nhsuk-pagination__list">
+
+
+          <li class="nhsuk-pagination-item--next">
+            <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="symptoms">
+              <span class="nhsuk-pagination__title">Next</span>
+              <span class="nhsuk-u-visually-hidden">:</span>
+              <span class="nhsuk-pagination__page">Symptoms</span>
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                aria-hidden="true" width="34" height="34">
+                <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z">
+                </path>
+              </svg>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+
+  </div>
+</article>
+
+
+
+{% endblock %}
+
+<!-- Footer goes inside the footer block -->
+<!-- Footer code examples can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/nhs-sites/" class="nhsuk-footer__list-item-link">NHS sites</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/nhs-app/" class="nhsuk-footer__list-item-link">NHS App</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/about-us/" class="nhsuk-footer__list-item-link">About us</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/contact-us/" class="nhsuk-footer__list-item-link">Contact us</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/personalisation/login.aspx" class="nhsuk-footer__list-item-link">Profile editor login</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/about-us/site-map/" class="nhsuk-footer__list-item-link">Site map</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/accessibility-statement/" class="nhsuk-footer__list-item-link">Accessibility statement</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/our-policies/" class="nhsuk-footer__list-item-link">Our policies</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/our-policies/cookies-policy/" class="nhsuk-footer__list-item-link">Cookies</a></li>
+      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+{% endblock %}
