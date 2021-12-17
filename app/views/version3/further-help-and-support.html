@@ -1,0 +1,238 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Content page template - NHS.UK prototype kit
+{% endblock %}
+
+<!-- Header goes inside the header block -->
+<!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
+{% block header %}
+
+  {{
+    header({
+      "showNav": "true",
+      "showSearch": "true",
+      "primaryLinks": [
+        {
+        "url": "https://www.nhs.uk/conditions/",
+        "label" : "Health A-Z "
+        },
+    
+        {
+        'url': 'https://www.nhs.uk/live-well/',
+        'label' : 'Live Well'
+        },
+
+        {
+        'url': 'https://www.nhs.uk/mental-health/',
+        'label' : 'Mental health'
+        },
+
+        {
+        'url': 'https://www.nhs.uk/conditions/social-care-and-support-guide/',
+        'label' : 'Care and support'
+        },
+
+        {
+        'url': 'pregnancy-hub/',
+        'label' : 'Pregnancy'
+        },
+
+        {
+        'url': 'https://www.nhs.uk/nhs-services/',
+        'label': 'NHS services'
+        }
+      ]
+    })
+  }}
+
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/",
+        text: "Home"
+      },
+      {
+        href: "/",
+        text: "Health A to Z"
+      }
+    ],
+        href: "menopause",
+        text: "Menopause"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+
+        <h1>
+          <span role="text">Further help and support
+            <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+              <span class="nhsuk-u-visually-hidden"> - </span>
+              Menopause
+            </span>
+          </span>
+        </h1>
+
+
+        <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+          <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+          <ol class="nhsuk-contents-list__list">
+
+            <li class="nhsuk-contents-list__item">
+              <span class="nhsuk-contents-list__link">Overview</span>
+            </li>
+    
+            <li class="nhsuk-contents-list__item">
+              <a class="nhsuk-contents-list__link" href="symptoms">Symptoms</a>
+            </li>
+    
+            <li class="nhsuk-contents-list__item">
+              <a class="nhsuk-contents-list__link" href="things-you-can-do">Things you can do</a>
+            </li>
+
+            <li class="nhsuk-contents-list__item">
+              <a class="nhsuk-contents-list__link" href="treatments">Treatments</a>
+            </li>
+
+            <li class="nhsuk-contents-list__item" aria-current="page">
+              <span class="nhsuk-contents-list__link">Further help and support</span>
+            </li>
+
+          </ol>
+        </nav>
+
+      </div>
+    </div>
+
+    <article>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+
+          <section>
+            <h2>Find out how other people experienced menopause</h2>
+            <p>Healthtalk has videos of people talking about living with menopause and what helped them. It covers many topics, including:</p>
+
+            <ul>
+              <li>changes in periods</li>
+              <li>memory and concentration</li>
+              <li>sex drive</li>
+              <li>vaginal dryness</li>
+              <li>emotions and the menopause</li>
+              <li>HRT</li>
+            </ul>
+
+            <div class="nhsuk-inset-text">
+              <span class="nhsuk-u-visually-hidden">Find our more:</span>
+              <p><a href="https://www.nhs.uk/conditions/hormone-replacement-therapy-hrt/">Watch videos of people talking about living with menopause</a></p>
+              <p>www.healthtalk.org</p>
+            </div>
+          </section>
+  
+          
+            <section>
+              <h2>Find health care professionals</h2>
+              <p>There are menopause specialists who have experience in supporting anyone going through perimenopause and menopause.</p>
+              <ul>
+                <li><a href="https://thebms.org.uk/find-a-menopause-specialist/">Find your nearest menopause specialist</a> (this lists private and NHS specialists)
+                  Psychological therapies like counselling or CBT (cognitive behavioural therapy) can help with symptoms of perimenopause and menopause. You can get NHS psychological therapies without seeing a GP first.
+                  </li>
+              </ul>
+
+              <ul>
+                <li><a href="https://www.nhs.uk/service-search/mental-health/find-a-psychological-therapies-service/">Find an NHS psychological therapies service</a></li>
+              </ul>
+            </section>
+
+
+
+            <section>
+              <h2>Other sources of information</h2>
+              <p>There are charities offering information and support:</p>
+              <ul>
+                <li><a href="https://thebms.org.uk/find-a-menopause-specialist/">Women's Health Concern</a></li>
+                <li><a href="https://www.menopausematters.co.uk/">Menopause Matters</a> </li>
+                <li><a href="https://www.daisynetwork.org/">Daisy Network</a> for premature menopause</li>
+                <li><a href="https://www.menopausecafe.net/">Menopause Café</a></li>
+                <li><a href="https://www.queermenopause.com/resources">Queermenopause</a> for people who identify as LGBT+</li>
+              </ul>
+            </section>
+
+
+          <div>
+            <p class="nhsuk-body-s nhsuk-u-margin-top-7 nhsuk-u-secondary-text-color">
+              Page last reviewed: 17 December 2021<br>
+              Next review due: 17 December 2024
+            </p>
+          </div>
+
+
+          <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+            <ul class="nhsuk-list nhsuk-pagination__list">
+
+              <li class="nhsuk-pagination-item--previous">
+                <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="treatments">
+                  <span class="nhsuk-pagination__title">Previous</span>
+                  <span class="nhsuk-u-visually-hidden">:</span>
+                  <span class="nhsuk-pagination__page">Treatments</span>
+                  <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    aria-hidden="true" width="34" height="34">
+                    <path
+                      d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z">
+                    </path>
+                  </svg>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+    </article>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+<!-- Footer goes inside the footer block -->
+<!-- Footer code examples can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/nhs-sites/" class="nhsuk-footer__list-item-link">NHS sites</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/nhs-app/" class="nhsuk-footer__list-item-link">NHS App</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/about-us/" class="nhsuk-footer__list-item-link">About us</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/contact-us/" class="nhsuk-footer__list-item-link">Contact us</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/personalisation/login.aspx" class="nhsuk-footer__list-item-link">Profile editor login</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/about-us/site-map/" class="nhsuk-footer__list-item-link">Site map</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/accessibility-statement/" class="nhsuk-footer__list-item-link">Accessibility statement</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/our-policies/" class="nhsuk-footer__list-item-link">Our policies</a></li>
+        <li class="nhsuk-footer__list-item"><a href="https://www.nhs.uk/our-policies/cookies-policy/" class="nhsuk-footer__list-item-link">Cookies</a></li>
+      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+{% endblock %}
+
